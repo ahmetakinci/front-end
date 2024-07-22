@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <head>
-        <meta charset="utf-8">
-        <title>Ahmet Arif Akıncı'nın kşisel web sitesi</title>
-        <meta name="description" content="Ahmet Arif Akıncı'nın Kşisel Web Sitesi">
-        <meta name="keywords" content="ahmet,arif,akıncı,web,site">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <h1>Ahmet Arif Akıncı</h1>
+            <a href="index.html">Anasayfa</a> |
+            <a href="cv.html">Özgeçmiş</a> | 
+            <a href="kitaplar.html">Kitaplarım</a> |
+            <a href="iletisim.html">İletişim</a>
+            <br>
+            <hr>
+        </div>
+    </nav>
 
-    </head>
-    <body>
-        <nav>
-            <center>
-                <h1>Ahmet Arif Akıncı</h1>
-                <a href="index.html">Anasayfa</a> |
-                <a href="cv.html">Özgeçmiş</a> | 
-                <a href="kitaplar.html">Kitaplarım</a> |
-                <a href="iletisim.html">İletişim</a>
-                <br>
-                <hr>
-                <h2>Adres:</h2>
-                <p>Eskibağlar Mah. Aşçı Sokak No:4 D:12
-                <br>
-                Tepebaşı/Eskişehir</p>
-                <h2>Telefon:</h2>
-                <p>0555 555 55 55</p>
-                <h2>Email:</h2>
-                <p>ahmetarifaknci@gmail.com</p>
-                <hr>
-                <br>
-                <form name="Email" accept="email.php" method="get">
-                    <table>
-                        <tr><td>Ad Soyad: </td><td><input type="text" name="adsoyad"></td></tr>
-                        <tr><td>Email: </td><td><input type="email" name="email"></td></tr>
-                        <tr><td>Mesaj: </td><td><textarea name="mesaj" cols="50" rows="5"></textarea></td></tr>
-                        <tr><td></td><td><input type="submit"><input type="reset"></td></tr>
+    <div class="container">
+        <h1>İletişim</h1>
+        <div class="contact-info">
+            <h2>Adres:</h2>
+            <p>Eskibağlar Mah. Aşçı Sokak No:4 D:12, Tepebaşı/Eskişehir</p>
+            <h2>Telefon:</h2>
+            <p>0555 555 55 55</p>
+            <h2>Email:</h2>
+            <p><a href="mailto:ahmetarifaknci@gmail.com">ahmetarifaknci@gmail.com</a></p>
+        </div>
 
-                    </table>
-                </form>
-            </center>
-        </nav>
-    </body>
+        <div class="contact-form">
+            <h2>Bizimle İletişime Geçin</h2>
+            <form action="email.php" method="post">
+                <label for="adsoyad">Ad Soyad:</label>
+                <input type="text" id="adsoyad" name="adsoyad" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mesaj">Mesaj:</label>
+                <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+
+                <button type="submit">Gönder</button>
+                <button type="reset">Temizle</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ahmet Arif Akıncı. Tüm hakları saklıdır.</p>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://x.com/aahmetakinci" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="https://www.instagram.com/arifaknci/?hl=tr" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="mailto:ahmetarifaknci@gmail.com">Email</a></li>
+            </ul>
+        </div>
+    </footer>    
+</body>
 </html>

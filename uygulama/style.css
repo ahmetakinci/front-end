@@ -1,0 +1,193 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* İletişim sayfası için stil */
+.contact-info, .contact-form {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2, .contact-form h2 {
+    margin-top: 0;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+.contact-form button[type="reset"] {
+    background: #6c757d;
+}
+
+.contact-form button[type="reset"]:hover {
+    background: #5a6268;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.socials li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.socials a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    text-decoration: underline;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    .book {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .book img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: block;
+    }
+
+    .nav-links a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    footer {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form input, 
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 14px;
+    }
+
+    .book {
+        padding: 10px;
+    }
+
+    .book img {
+        width: 100px;
+    }
+}
