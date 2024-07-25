@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gider Pusulası</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .page {
+            width: 210mm;
+            height: 297mm;
+            padding: 10mm;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+        }
+        .top-row, .middle-row {
+            display: flex;
+            width: 100%;
+        }
+        .top-row {
+            height: 15%;
+        }
+        .middle-row {
+            height: 20%;
+        }
+        .top-row .left, .middle-row .left {
+            width: 66.66%;
+            padding: 5mm;
+        }
+        .top-row .right, .middle-row .right {
+            width: 33.33%;
+            padding: 5mm;
+        }
+        .bottom-row {
+            width: 100%;
+            height: 65%;
+            display: flex;
+        }
+        .box {
+            border: 1px solid #000;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .full-width {
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .content h1 {
+            font-size: 14pt;
+            margin: 0 0 10px 0;
+        }
+        .content p {
+            margin: 0;
+            padding: 0;
+            font-size: 12pt;
+        }
+        .right-box-content {
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .right-box-content h1 {
+            font-size: 14pt;
+            margin: 0 0 10px 0;
+        }
+        .right-box-content p {
+            font-size: 12pt;
+            margin: 0;
+        }
+        .big-box {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #000;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+        .text-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            box-sizing: border-box;
+            font-size: 12pt;
+        }
+        .text-box p {
+            margin: 0;
+            padding: 0;
+        }
+        .table-container {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+        table {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        th {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="top-row">
+                <div class="box left content">
+                    <h1>Başlık</h1>
+                    <p>Satır 1</p>
+                    <p>Satır 2</p>
+                    <p>Satır 3</p>
+                    <p>Satır 4</p>
+                </div>
+                <div class="box right">Right Box 1</div>
+                <div class="box right">
+                    <div class="right-box-content">
+                        <h1>Başlık</h1>
+                        <p>Satır 1</p>
+                        <p>Satır 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-row">
+                <div class="box left">
+                    <div class="big-box">Büyük Kutu</div>
+                </div>
+                <div class="box right">Middle Box 2</div>
+                <div class="box right">
+                    <div class="text-box">
+                        <p>Satır 1</p>
+                        <p>Satır 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-row">
+                <div class="box full-width">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Başlık 1</th>
+                                    <th>Başlık 2</th>
+                                    <th>Başlık 3</th>
+                                    <th>Başlık 4</th>
+                                    <th>Başlık 5</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Satır 1, Hücre 1</td>
+                                    <td>Satır 1, Hücre 2</td>
+                                    <td>Satır 1, Hücre 3</td>
+                                    <td>Satır 1, Hücre 4</td>
+                                    <td>Satır 1, Hücre 5</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Satır 2, Hücre 1 ve 2'yi Birleştir</td>
+                                    <td colspan="2">Satır 2, Hücre 3 ve 4'ü Birleştir</td>
+                                    <td>Satır 2, Hücre 5</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">Satır 3, Hücre 1, 2, 3, 4 ve 5'i Birleştir</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">Satır 4, Hücre 1, 2, 3, 4 ve 5'i Birleştir</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
